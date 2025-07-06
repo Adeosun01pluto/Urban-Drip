@@ -140,11 +140,11 @@ const ProductCard = ({ product }) => {
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-72 object-cover object-center"
+          className="w-full h-48 sm:h-72 object-cover object-center"
         />
-        <div className="p-4">
+        <div className="p-2 sm:p-4">
           <h3 className="text-lg font-semibold text-gray-800 truncate">{title}</h3> {/* Use title */}
-          <p className="text-gray-600 mt-1">${price.toFixed(2)}</p>
+          <p className="text-gray-600 mt-0">${price.toFixed(2)}</p>
           {/* Removed rating and reviews as API doesn't provide them */}
           {/*
           {rating && (
@@ -169,7 +169,7 @@ const ProductCard = ({ product }) => {
           */}
         </div>
       </Link>
-      <div className="p-4 pt-0">
+      <div className="p-2 sm:p-4 pt-0">
         <button
           onClick={handleAddToCart}
           className="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-700 transition duration-300"
