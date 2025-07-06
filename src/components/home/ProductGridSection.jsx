@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const ProductGridSection = ({ title, products, loading, error, linkText, linkUrl }) => {
   return (
-    <section className="container mx-auto px-4 py-6 sm:py-16">
-      <div className="flex justify-between items-center mb-10">
+    <section className="container mx-auto px-2 py-6 sm:py-16">
+      <div className="flex justify-between items-center mb-5 sm:mb-10">
         <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900">{title}</h2>
         {linkText && linkUrl && (
           <Link
@@ -33,7 +33,7 @@ const ProductGridSection = ({ title, products, loading, error, linkText, linkUrl
           <p className="text-xl text-gray-600">No {title.toLowerCase()} found.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -586,7 +586,7 @@ const ProductDetailPage = () => {
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <section className="mt-20">
-            <h2 className="text-4xl font-bold text-gray-900 text-center mb-5 sm:mb-10">
+            <h2 className="text-4xl font-bold text-gray-900 text-center mb-5sm:mb-10">
               You Might Also Like
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8">

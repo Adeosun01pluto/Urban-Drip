@@ -171,7 +171,7 @@ const CartPage = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-12">
-        <h1 className="text-5xl font-extrabold text-center text-gray-900 mb-12">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-gray-900 mb-5 sm:mb-12">
           Your <span className="text-gray-600">Drip</span> Cart
         </h1>
 
@@ -191,15 +191,15 @@ const CartPage = () => {
             <div className="lg:col-span-2 bg-white p-4 sm:p-6 rounded-lg shadow-lg">
               {cartItems.map((item) => (
                 <div key={item.id + (item.size || '') + (item.color || '')}
-                     className="flex flex-col sm:flex-row items-center border-b border-gray-200 py-4 last:border-b-0">
-                  <Link to={`/product/${item.id}`} className="flex-shrink-0 mb-4 sm:mb-0">
+                     className="flex flex-col sm:flex-row sm:items-center border-b border-gray-200 py-2 sm:py-4 last:border-b-0">
+                  <Link to={`/product/${item.id}`} className="flex-shrink-0 mb-2 sm:mb-0">
                     <img
                       src={item.imageUrl}
                       alt={item.name}
-                      className="w-24 h-24 object-cover rounded-md sm:mr-4"
+                      className="w-48 sm:w-32 h-32 object-cover rounded-md sm:mr-4"
                     />
                   </Link>
-                  <div className="flex-grow text-center sm:text-left mb-4 sm:mb-0">
+                  <div className="flex-grow text-sm sm:text-left mb-1 sm:mb-0">
                     <h2 className="text-xl font-semibold text-gray-800">
                       <Link to={`/product/${item.id}`} className="hover:text-gray-600 transition-colors">
                         {item.name}
@@ -210,7 +210,7 @@ const CartPage = () => {
                     <p className="text-lg font-medium text-gray-700 mt-1">${item.price.toFixed(2)}</p>
                   </div>
                   {/* Quantity and Remove Button Group */}
-                  <div className="flex items-center space-x-4 mb-4 sm:mb-0">
+                  <div className="flex items-center space-x-4 mb-2 sm:mb-0">
                     <div className="flex items-center border border-gray-300 rounded-md">
                       <button
                         onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
@@ -240,7 +240,7 @@ const CartPage = () => {
                     </button>
                   </div>
                   {/* Item Total Price - Hidden on very small screens, visible on sm and up */}
-                  <div className="ml-0 sm:ml-6 text-xl font-bold text-gray-900 w-full sm:w-24 text-right mt-2 sm:mt-0">
+                  <div className="ml-0 sm:ml-6 text-xl font-bold text-gray-900 w-full sm:w-24 text-right sm:mt-0">
                     ${(item.price * item.quantity).toFixed(2)}
                   </div>
                 </div>

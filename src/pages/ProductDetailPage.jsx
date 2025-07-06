@@ -498,8 +498,8 @@ const ProductDetailPage = () => {
             <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
               {product.category ? product.category.name : 'Uncategorized'}
             </span>
-            <h1 className="text-4xl font-bold text-gray-900 mt-2 mb-3">{product.title}</h1> {/* Use product.title */}
-            <p className="text-3xl font-extrabold text-gray-900 mb-6">${product.price.toFixed(2)}</p>
+            <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mt-2 mb-3">{product.title}</h1> {/* Use product.title */}
+            <p className="text-3xl font-slim text-gray-900 mb-6">${product.price.toFixed(2)}</p>
 
             {/* Dummy Rating (API does not provide ratings) */}
             <div className="flex items-center mb-4">
@@ -608,10 +608,10 @@ const ProductDetailPage = () => {
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <section className="mt-20">
-            <h2 className="text-4xl font-bold text-gray-900 text-center mb-10">
+            <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 text-center mb-10">
               You Might Also Like
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8">
               {relatedProducts.map((relatedProduct) => (
                 <ProductCard key={relatedProduct.id} product={relatedProduct} />
               ))}
