@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ProductGridSection = ({ title, products, loading, error, linkText, linkUrl }) => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-6 sm:py-16">
       <div className="flex justify-between items-center mb-10">
         <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900">{title}</h2>
         {linkText && linkUrl && (
