@@ -48,6 +48,7 @@ import LoginPage from './pages/LoginPage'; // New
 import SignupPage from './pages/SignupPage'; // New
 import UserProfilePage from './pages/UserProfilePage'; // Placeholder for protected route
 import AdminDashboardPage from './pages/AdminDashboardPage'; // Placeholder for admin route
+import ScrollToTop from './components/common/ScrollToTop';
 
 import { CartProvider } from './contexts/CartContext';
 import { AuthProvider, useAuth } from './contexts/AuthContext'; // New: AuthProvider and useAuth
@@ -83,6 +84,7 @@ const App = () => {
   return (
     <Router>
       {/* Wrap the entire application with AuthProvider */}
+            <ScrollToTop /> 
       <AuthProvider>
         <CartProvider>
           <Routes>
