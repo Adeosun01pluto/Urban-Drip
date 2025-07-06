@@ -7,11 +7,11 @@ const ProductGridSection = ({ title, products, loading, error, linkText, linkUrl
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="flex justify-between items-center mb-10">
-        <h2 className="text-4xl font-extrabold text-gray-900">{title}</h2>
+        <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900">{title}</h2>
         {linkText && linkUrl && (
           <Link
             to={linkUrl}
-            className="text-gray-600 hover:text-gray-900 font-semibold text-lg transition-colors duration-200"
+            className="text-gray-600 hover:text-gray-900 font-semibold text-md sm:text-lg transition-colors duration-200"
           >
             {linkText} &rarr;
           </Link>

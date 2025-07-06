@@ -367,14 +367,14 @@ const HeroSection = () => {
         <>
           <button
             onClick={goToPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-white"
+            className="absolute left-4 bottom-10 sm:top-1/2 -translate-y-1/2 bg-gray-800 sm:bg-transparent bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition duration-300 z-20 focus:outline-none focus:ring-2 border-none outline-none focus:ring-white"
             aria-label="Previous slide"
           >
             <IoChevronBack className="h-6 w-6 md:h-8 md:w-8" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-white"
+            className="absolute right-4 bottom-10 sm:top-1/2 -translate-y-1/2 bg-gray-800 sm:bg-transparent bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-white"
             aria-label="Next slide"
           >
             <IoChevronForward className="h-6 w-6 md:h-8 md:w-8" />
